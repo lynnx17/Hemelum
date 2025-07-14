@@ -18,15 +18,15 @@
         <h2>Een digitale verhaallijn over de geschiedenis van de Russisch ortodoxe klooster in Hemelum</h2>
     </header>
     
-    <audio autoplay loop hidden>
-        <source src="audio/start.mp3" type="audio/mpeg">
-        Je browser ondersteunt geen audio-element.
-        </audio>
+    <audio id="start-audio" loop>
+    <source src="audio/start.mp3" type="audio/mpeg">
+    Je browser ondersteunt geen audio-element.
+    </audio>
 
     <main>
     <label for="name-input">Voer je naam in:</label>
     <input type="text" id="name-input" placeholder="Voer je naam in">
-    <button id="start-btn" onclick="startBtn()">Start de digital story</button>
+    <button id="start-btn" onclick="saveName()">Start de digital story</button>
     </main>
 
     <footer>
