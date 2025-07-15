@@ -11,3 +11,6 @@ const naam = localStorage.getItem("gebruikersnaam");
   } else {
     document.getElementById("naam-placeholder").textContent = "gast";
   }
+
+
+  
