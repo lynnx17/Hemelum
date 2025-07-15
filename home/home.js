@@ -1,47 +1,45 @@
 window.addEventListener("DOMContentLoaded", () => {
-  // 🔊 Muziek starten
   const audio = document.getElementById("background-music");
   const toggleBtn = document.getElementById("music-toggle");
-
-  if (audio) {
-    audio.play().then(() => {
-      console.log("🎶 Muziek speelt op home");
-    }).catch(err => {
-      console.warn("🎧 Kon muziek niet automatisch afspelen:", err);
-    });
-
-    // 🎵 Muziekknop functionaliteit
-    if (toggleBtn) {
-      toggleBtn.addEventListener("click", () => {
-        if (audio.paused) {
-          audio.play();
-          toggleBtn.textContent = "🎵"; // Speelt
-        } else {
-          audio.pause();
-          toggleBtn.textContent = "🔇"; // Gepauzeerd
-        }
-      });
-
-      // Zet juiste status bij laden
-      toggleBtn.textContent = audio.paused ? "🔇" : "🎵";
-    }
-  }
-
-  // 🍔 Hamburger menu toggle
+  const naamPlaceholder = document.getElementById("naam-placeholder");
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
+  // Naam tonen
+  const naam = localStorage.getItem("gebruikersnaam");
+  if (naamPlaceholder) {
+    naamPlaceholder.textContent = naam ? naam : "gast";
+  }
+
+  // Hamburger menu toggle
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
   }
 
-  // 🧑 Gebruikersnaam ophalen
-  const naam = localStorage.getItem("gebruikersnaam");
-  const naamPlaceholder = document.getElementById("naam-placeholder");
+  if (audio && toggleBtn) {
+    // Probeer muziek automatisch te starten
+    audio.play().then(() => {
+      toggleBtn.textContent = "🎵"; // muziek speelt
+      console.log("🎶 Muziek automatisch gestart");
+    }).catch(err => {
+      toggleBtn.textContent = "🔇"; // muziek niet gestart, wacht op klik
+      console.warn("🎧 Automatisch afspelen geblokkeerd:", err);
+    });
 
-  if (naamPlaceholder) {
-    naamPlaceholder.textContent = naam ? naam : "gast";
+    // Play/pauze knop
+    toggleBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().then(() => {
+          toggleBtn.textContent = "🎵";
+        }).catch(err => {
+          console.warn("🎧 Afspelen na klik mislukt:", err);
+        });
+      } else {
+        audio.pause();
+        toggleBtn.textContent = "🔇";
+      }
+    });
   }
 });
