@@ -77,6 +77,12 @@ header h1 {
   display: flex;
 }
 
+audio {
+    display: none; /* Hide the audio controls by default */
+}
+
+
+
 main {
     display: flex;
     flex-direction: column;
