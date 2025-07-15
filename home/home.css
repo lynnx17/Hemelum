@@ -78,10 +78,8 @@ header h1 {
 }
 
 audio {
-    display: none; /* Hide the audio controls by default */
+    display: none; 
 }
-
-
 
 main {
     display: flex;
@@ -94,19 +92,37 @@ main {
 
 }
 
-footer {
-    background-color: #222;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    margin: 0;
+.deur-container {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  cursor: pointer;
+  z-index: 10;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.8em;
+#deur-knop {
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+  pointer-events: none; 
+}
+
+#deur-knop:hover {
+  transform: scale(1.05);
+}
+
+.deur-container::after {
+  content: "";
+  position: absolute;
+  top: 10%; 
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.deur-container:hover img {
+  transform: scale(1.05); 
 }
