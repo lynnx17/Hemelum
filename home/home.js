@@ -77,7 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           klinkel.pause();
           klinkel.currentTime = 0;
-        }, 28000);
+        }, 23000);
       }
     }, 100);
   }
