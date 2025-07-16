@@ -119,3 +119,35 @@ main {
 .deur-container:hover img {
   transform: scale(1.05);
 }
+
+
+.heilige1-container {
+  position: absolute;
+  top: 85%; 
+  left: -10%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+}
+
+.animate-slide {
+  animation: heilige1 30s linear forwards;
+}
+
+@keyframes heilige1 {
+    0% {
+      left: -10%;
+      opacity: 1;
+    }
+    100% {
+      left: 110%;
+      opacity: 1;
+    }
+}
+
+#heilige1-knop {
+    pointer-events: auto;
+    display: block; 
+    width: 250px;
+    height: 250px;
+}
