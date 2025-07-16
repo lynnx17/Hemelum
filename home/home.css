@@ -100,8 +100,8 @@ main {
 
 .deur-container {
     position: absolute;
-    top: 38%;
-    left: 50%;
+    top: 84%;
+    left: 45%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 10;
@@ -112,6 +112,8 @@ main {
     transition: transform 0.3s ease;
     pointer-events: auto;
     display: block; 
+    width: 250px;
+    height: 250px;
 }
 
 .deur-container:hover img {
