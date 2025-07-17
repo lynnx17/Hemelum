@@ -120,6 +120,28 @@ main {
   transform: scale(1.05);
 }
 
+.raam-container {
+    position: absolute;
+    top: 49%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+#raam-knop {
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+    pointer-events: auto;
+    display: block; 
+    height: 300px;
+    width: 175px;
+}
+
+.raam-container:hover img {
+  transform: scale(1.05);
+}
+
 
 .heilige1-container {
   position: absolute;
@@ -130,19 +152,19 @@ main {
   opacity: 0;
 }
 
-.animate-slide {
+.animate-slide-heilige1 {
   animation: heilige1 30s linear forwards;
 }
 
 @keyframes heilige1 {
-    0% {
-      left: -10%;
-      opacity: 1;
-    }
-    100% {
-      left: 110%;
-      opacity: 1;
-    }
+  0% {
+    left: -10%;
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 1;
+  }
 }
 
 #heilige1-knop {
@@ -150,4 +172,35 @@ main {
     display: block; 
     width: 250px;
     height: 250px;
+}
+
+.heilige2-container {
+  position: absolute;
+  top: 81%; 
+  left: 110%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 20;
+}
+
+#heilige2-knop {
+    pointer-events: auto;
+    display: block; 
+    width: 250px;
+    height: 250px;
+}
+
+.animate-slide-heilige2 {
+  animation: heilige2 30s linear forwards;
+}
+
+@keyframes heilige2 {
+  0% {
+    left: 110%;
+    opacity: 1;
+  }
+  100% {
+    left: -20%;
+    opacity: 1;
+  }
 }
