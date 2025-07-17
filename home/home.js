@@ -2,43 +2,36 @@ window.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("background-music");
   const toggleBtn = document.getElementById("music-toggle");
   const naamPlaceholder = document.getElementById("naam-placeholder");
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
   const heilige1 = document.querySelector(".heilige1-container");
+  const heilige2 = document.querySelector(".heilige2-container");
+
   const klinkel = document.getElementById("heilige-sound");
 
-  // --- Naam ophalen en tonen ---
+  // --- Naam tonen ---
   const naam = localStorage.getItem("gebruikersnaam");
   if (naamPlaceholder) {
-    naamPlaceholder.textContent = naam ? naam : "gast";
+    naamPlaceholder.textContent = naam || "gast";
   }
 
-  // --- Hamburger menu toggle ---
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  }
+  // --- Hamburger toggle ---
+  hamburger?.addEventListener("click", () => {
+    navLinks?.classList.toggle("show");
+  });
 
-  // --- Muziek automatisch starten en toggle knop ---
+  // --- Muziekbeheer ---
   if (audio && toggleBtn) {
-    // Probeer automatisch afspelen
     audio.play().then(() => {
-      toggleBtn.textContent = "🎵"; // muziek speelt
-      console.log("🎶 Muziek automatisch gestart");
-    }).catch(err => {
-      toggleBtn.textContent = "🔇"; // afspelen geblokkeerd
-      console.warn("🎧 Automatisch afspelen geblokkeerd:", err);
+      toggleBtn.textContent = "🎵";
+    }).catch(() => {
+      toggleBtn.textContent = "🔇";
     });
 
-    // Toggle knop functionaliteit
     toggleBtn.addEventListener("click", () => {
       if (audio.paused) {
-        audio.play().then(() => {
-          toggleBtn.textContent = "🎵";
-        }).catch(err => {
-          console.warn("🎧 Afspelen na klik mislukt:", err);
-        });
+        audio.play().then(() => toggleBtn.textContent = "🎵");
       } else {
         audio.pause();
         toggleBtn.textContent = "🔇";
@@ -46,48 +39,46 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Heilige animatie met klinkel geluid ---
-  function startAnimatie() {
-    if (!heilige1) return;
+  // --- Heiligen animatie om de beurt ---
+  let beurt = 1;
 
-    // Reset animatie en geluid
-    heilige1.classList.remove("animate-slide");
-    heilige1.style.opacity = "0";
+  function resetEnSpeelGeluid() {
+    if (!klinkel) return;
+    klinkel.pause();
+    klinkel.currentTime = 0;
+    klinkel.loop = true;
+    klinkel.muted = false;
+    klinkel.volume = 1;
+    klinkel.play().catch(err => console.warn("🔇 Geluid niet afgespeeld:", err));
 
-    if (klinkel) {
+    // Stop geluid na 28 sec
+    setTimeout(() => {
       klinkel.pause();
       klinkel.currentTime = 0;
-      klinkel.loop = true;
-      klinkel.volume = 1;
-      klinkel.muted = true; // standaard muted, tot gebruikersinteractie
-    }
-
-    // Kleine delay voor animatie herstart
-    setTimeout(() => {
-      heilige1.classList.add("animate-slide");
-      heilige1.style.opacity = "1";
-
-      if (klinkel) {
-        klinkel.muted = false; // zet geluid aan bij animatie start
-        klinkel.play().catch(err => {
-          console.warn("🔇 Geluid kon niet automatisch afgespeeld worden:", err);
-        });
-
-        // Stop geluid na 30 sec (loopt zolang animatie duurt)
-        setTimeout(() => {
-          klinkel.pause();
-          klinkel.currentTime = 0;
-        }, 23000);
-      }
-    }, 100);
+    }, 28000);
   }
 
-  // Start animatie + geluid direct en daarna elke 45 seconden
-  startAnimatie();
-  setInterval(startAnimatie, 45000);
+  function startHeiligeAnimatie() {
+    if (beurt === 1 && heilige1) {
+      heilige1.classList.remove("animate-slide-heilige1");
+      void heilige1.offsetWidth; // Force reflow om animatie te herstarten
+      heilige1.classList.add("animate-slide-heilige1");
+      resetEnSpeelGeluid();
+      beurt = 2;
+    } else if (beurt === 2 && heilige2) {
+      heilige2.classList.remove("animate-slide-heilige2");
+      void heilige2.offsetWidth;
+      heilige2.classList.add("animate-slide-heilige2");
+      resetEnSpeelGeluid();
+      beurt = 1;
+    }
+  }
 
-  // --- Browser vereist gebruikersinteractie voor geluid ---
-  // Hier maak je zeker dat geluid mag spelen na 1x klik ergens op pagina
+  // Start direct en herhaal elke 45 sec
+  startHeiligeAnimatie();
+  setInterval(startHeiligeAnimatie, 45000);
+
+  // --- Audio toestaan na gebruikersactie ---
   function enableAudioOnUserGesture() {
     if (klinkel) {
       klinkel.muted = false;
@@ -98,7 +89,8 @@ window.addEventListener("DOMContentLoaded", () => {
       audio.muted = false;
       audio.play().catch(() => {});
     }
-    document.body.removeEventListener('click', enableAudioOnUserGesture);
+    document.body.removeEventListener("click", enableAudioOnUserGesture);
   }
-  document.body.addEventListener('click', enableAudioOnUserGesture);
+
+  document.body.addEventListener("click", enableAudioOnUserGesture);
 });
