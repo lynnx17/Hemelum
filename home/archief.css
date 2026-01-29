@@ -1,0 +1,237 @@
+/* ===================== */
+/* ALGEMENE STIJLEN BODY */
+/* ===================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+/* ===================== */
+/* HEADER EN NAVIGATIE   */
+/* ===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 2000;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.hamburger {
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-links {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #222;
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 0 0 0 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.nav-links a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+/* ===================== */
+/* AUDIO                 */
+/* ===================== */
+audio {
+  display: none;
+}
+
+#background-music {
+  z-index: 30;
+}
+
+/* ===================== */
+/* ARCHIEF PAGINA        */
+/* ===================== */
+
+/* Achtergrond zoals home */
+.archief-bg {
+  min-height: 100vh;
+  background-image: url("../images/home-achtergrond.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Transparante overlay laag */
+.archief-overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+}
+
+/* Titel boven grid */
+.archief-overlay h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Grid voor archief-items */
+.archief-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Individueel item */
+.archief-item {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 15px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover-effect subtiel */
+.archief-item:hover {
+  transform: scale(1.02);
+}
+
+/* Afbeeldingen */
+.archief-item img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Titel van item */
+.archief-item h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Beschrijving */
+.archief-item p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: white;
+  width: 80%;
+  max-width: 900px;
+  height: 70%;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+#overlay-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+hr {
+  margin: 30px 0;
+}

@@ -101,7 +101,7 @@ main {
 .deur-container {
     position: absolute;
     top: 84%;
-    left: 45%;
+    left: 44%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 10;
@@ -113,7 +113,7 @@ main {
     pointer-events: auto;
     display: block; 
     width: 250px;
-    height: 250px;
+    height: 280px;
 }
 
 .deur-container:hover img {
@@ -123,7 +123,7 @@ main {
 .raam-container {
     position: absolute;
     top: 49%;
-    left: 32%;
+    left: 29%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 10;
@@ -134,8 +134,8 @@ main {
     transition: transform 0.3s ease;
     pointer-events: auto;
     display: block; 
-    height: 300px;
-    width: 175px;
+    height: 325px;
+    width: 200px;
 }
 
 .raam-container:hover img {
@@ -144,8 +144,8 @@ main {
 
 .bord-container {
     position: absolute;
-    top: 80%;
-    left: 31%;
+    top: 79%;
+    left: 29%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 10;
@@ -156,7 +156,7 @@ main {
     transition: transform 0.3s ease;
     pointer-events: auto;
     display: block; 
-    width: 180px;
+    width: 200px;
 }
 
 .bord-container:hover img {
@@ -196,7 +196,7 @@ main {
 
 .heilige2-container {
   position: absolute;
-  top: 81%; 
+  top: 85%; 
   left: 110%;
   transform: translateY(-50%);
   z-index: 10;
@@ -223,4 +223,95 @@ main {
     left: -20%;
     opacity: 1;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: white;
+  width: 80%;
+  max-width: 900px;
+  height: 70%;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+#overlay-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+hr {
+  margin: 30px 0;
 }
