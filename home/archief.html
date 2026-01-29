@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archief – Klooster van Hemelum</title>
+  <link rel="stylesheet" href="archief.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Welkom <span id="naam-placeholder"></span> in het archief van het klooster in Hemelum</h1>
+
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="#" id="about-link">Over deze website</a>
+      <a href="#">Archief</a>
+      <a href="#" id="contact-link">Contact</a>
+    </nav>
+
+    <button id="music-toggle" aria-label="Muziek pauzeren/afspelen">🎵</button>
+    <audio id="background-music" loop>
+      <source src="../audio/start.mp3" type="audio/mpeg">
+      Je browser ondersteunt audio niet.
+    </audio>
+  </header>
+
+  <!-- ARCHIEF HOOFDSECTIE -->
+  <main class="archief-bg">
+    <div class="archief-overlay">
+
+      <h2>Beeldarchief</h2>
+
+      <div class="archief-container">
+        <div class="archief-item">
+          <img src="../images/archief/beeld1.jpg" alt="Interieur">
+          <h3>Interieur</h3>
+          <p>Het klooster van binnen, vroeg in de ochtend.</p>
+        </div>
+
+        <div class="archief-item">
+          <img src="../images/archief/beeld2.jpg" alt="Tuin">
+          <h3>Kloostertuin</h3>
+          <p>Een moment van stilte in de tuin.</p>
+        </div>
+
+        <div class="archief-item">
+          <img src="../images/archief/beeld3.jpg" alt="Deur">
+          <h3>Oude deur</h3>
+          <p>De originele kloosterdeur, zwaar en verweerd.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <button id="overlay-close">✖</button>
+            <div id="overlay-body"></div>
+        </div>
+    </div>
+
+
+  <script src="home.js"></script>
+</body>
+</html>

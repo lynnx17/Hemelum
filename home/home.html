@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
-   <header>
-        <h1>Welkom <span id="naam-placeholder"></span> in het klooser van Hemelum</h1>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-            <nav class="nav-links" id="nav-links">
+    <header>
+        <h1>Welkom <span id="naam-placeholder"></span> in het klooster van Hemelum</h1>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav class="nav-links" id="nav-links">
             <a href="#">Home</a>
-            <a href="#">Over deze website</a>
-            <a href="#">Archief</a>
-            <a href="#">Contact</a>
+            <a href="#" id="about-link">Over deze website</a>
+            <a href="archief.html">Archief</a>
+            <a href="#" id="contact-link">Contact</a>
         </nav>
 
         <button id="music-toggle" aria-label="Muziek pauzeren/afspelen">🎵</button>
-            <audio id="background-music" loop>
+        <audio id="background-music" loop>
             <source src="../audio/start.mp3" type="audio/mpeg">
             Je browser ondersteunt audio niet.
-            </audio>
+        </audio>
     </header>
 
     <main>
@@ -29,34 +31,42 @@
             <img src="../images/gifs/deur.png" alt="Kloosterdeur" id="deur-knop">
         </div>
 
-         <div class="raam-container">
+        <div class="raam-container">
             <img src="../images/gifs/raam.png" alt="Kloosterraam" id="raam-knop">
         </div>
 
 
-         <div class="bord-container">
+        <div class="bord-container">
             <img src="../images/gifs/bord.png" alt="Kloosterbord" id="bord-knop">
         </div>
 
-          <div class="heilige1-container">
+        <div class="heilige1-container">
             <img src="../images/gifs/heilige 1.png" alt="heilige" id="heilige1-knop">
             <audio id="heilige-sound">
-            <source src="../audio/geklingel.wav" type="audio/mpeg">
-            Je browser ondersteunt geen audio.
+                <source src="../audio/geklingel.wav" type="audio/mpeg">
+                Je browser ondersteunt geen audio.
             </audio>
         </div>
 
         <div class="heilige2-container">
             <img src="../images/gifs/heilige 2.png" alt="heilige" id="heilige2-knop">
             <audio id="heilige-sound">
-            <source src="../audio/geklingel.wav" type="audio/mpeg">
-            Je browser ondersteunt geen audio.
+                <source src="../audio/geklingel.wav" type="audio/mpeg">
+                Je browser ondersteunt geen audio.
             </audio>
         </div>
     </main>
 
-   
+
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <button id="overlay-close">✖</button>
+            <div id="overlay-body"></div>
+        </div>
+    </div>
+
 
     <script src="home.js"></script>
 </body>
+
 </html>
