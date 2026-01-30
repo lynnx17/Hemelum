@@ -117,14 +117,72 @@ window.addEventListener("DOMContentLoaded", () => {
   /* =======================
      OVERLAY CLICKS
   ======================== */
+  deur?.addEventListener("click", () => {
+  window.location.href = "binnen.html";
+});
+
+bord?.addEventListener("click", () => {
+  openOverlay(`
+    <article class="overlay-article">
+      <h2>Artikel over het Klooster </h2>
+      <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<em></p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+  `);
+});
+
+aboutLink?.addEventListener("click", (e) => {
+  if (e) e.preventDefault();
+
+  openOverlay(`
+    <article class="overlay-jubileum">
+      <h2>🎉 Jubileum – Klooster van Hemelum 🎉</h2>
+
+      <p>Het Klooster van Hemelum bestaat dit jaar <strong>XX jaar</strong>! Ter gelegenheid van dit jubileum hebben wij deze interactieve website ontwikkeld.</p>
+
+      <p>Deze site is een gezamenlijke creatie van <strong>Art</strong>, <strong>Lynn</strong> & <strong>Vader...</strong>, en biedt bezoekers een unieke blik op de geschiedenis, sfeer en beleving van het klooster.</p>
+
+      <p>Het project is mogelijk gemaakt door het klooster zelf, met steun van vrijwilligers en liefhebbers.</p>
+
+      <p>Duik in verhalen, foto's en video's en vier samen met ons dit bijzondere jubileumjaar!</p>
+    </article>
+  `);
+});
+
+
+
   const overlayData = [
-    { element: bord, html: `<h2>Mededelingenbord</h2><p>Welkom in het klooster van Hemelum.</p>` },
-    { element: deur, html: `<h2>De Kloosterdeur</h2><p>De deur kraakt langzaam open...</p>` },
-    { element: raam, html: `<h2>Het Raam</h2><p>Je kijkt naar binnen.</p>` },
-    { element: heilige1Knop, html: `<h2>Heilige I</h2><p>Een zwijgende wachter van het klooster.</p><p>Zijn ogen lijken je te volgen.</p>` },
-    { element: heilige2Knop, html: `<h2>Heilige II</h2><p>Deze heilige fluistert oude gebeden.</p><p>Je voelt een lichte rilling.</p>` },
-    { element: aboutLink, html: `<h2>Over deze website</h2><p>Deze website is een digitaal project rondom het <strong>Klooster van Hemelum</strong>.</p><p>Het doel van deze site is om bezoekers op een interactieve en verhalende manier kennis te laten maken met de sfeer, geschiedenis en beleving van het klooster.</p><p>In de toekomst zal hier meer informatie verschijnen over het ontstaan van deze website, de motivatie achter het project en de mensen die eraan hebben meegewerkt.</p><p>Deze website is in de maak.</p>`, preventDefault: true },
-    { element: contactLink, html: `<h2>Contact – Klooster van Hemelum</h2>
+    { element: raam, html: `<h2>Het Raam</h2>
+    <p>Een documontaire over het Klooster.</p>
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="../video/voorbeeld.mp4" type="video/mp4">
+        Je browser ondersteunt deze video niet.
+      </video>
+    </div>` },
+    { element: heilige1Knop, html: `<h2>Heilige 1</h2>
+    <p>Een documontaire.</p>
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="../video/voorbeeld.mp4" type="video/mp4">
+        Je browser ondersteunt deze video niet.
+      </video>
+    </div>
+    <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<em></p>
+      ` },
+    { element: heilige2Knop, html: `<h2>Heilige 2</h2>
+    <p>Een documontaire.</p>
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="../video/voorbeeld.mp4" type="video/mp4">
+        Je browser ondersteunt deze video niet.
+      </video>
+    </div>
+    <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<em></p>
+      ` },
+    { element: contactLink, html: `<h2 class"black">Contact – Klooster van Hemelum</h2>
       <form id="contact-form" class="contact-form">
         <label>Naam<input type="text" name="naam" placeholder="Uw naam" required></label>
         <label>E-mail<input type="email" name="email" placeholder="uw@email.nl" required></label>
