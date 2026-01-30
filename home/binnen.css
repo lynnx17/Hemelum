@@ -1,25 +1,16 @@
-body {
-    background-color: #000000;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-}
-
-header {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    z-index: 20;
-}
-
+/* ===================== */
+/* ALGEMENE STIJLEN BODY */
+/* ===================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: black;
+  color: white;
 }
 
+/* ===================== */
+/* HEADER EN NAVIGATIE   */
+/* ===================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +19,7 @@ header {
   color: white;
   padding: 10px 20px;
   position: relative;
-  height: 20px;
+  z-index: 2000;
 }
 
 header h1 {
@@ -78,155 +69,17 @@ header h1 {
   display: flex;
 }
 
+/* ===================== */
+/* AUDIO                 */
+/* ===================== */
 audio {
-    display: none; 
+  display: none;
 }
 
-#background-music{
+#background-music {
   z-index: 30;
 }
 
-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url('../images/home-achtergrond.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.deur-container {
-    position: absolute;
-    top: 84%;
-    left: 44%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 10;
-}
-
-#deur-knop {
-    opacity: 0.9;
-    transition: transform 0.3s ease;
-    pointer-events: auto;
-    display: block; 
-    width: 250px;
-    height: 280px;
-}
-
-.deur-container:hover img {
-  transform: scale(1.05);
-}
-
-.raam-container {
-    position: absolute;
-    top: 49%;
-    left: 29%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 10;
-}
-
-#raam-knop {
-    opacity: 0.9;
-    transition: transform 0.3s ease;
-    pointer-events: auto;
-    display: block; 
-    height: 325px;
-    width: 200px;
-}
-
-.raam-container:hover img {
-  transform: scale(1.05);
-}
-
-.bord-container {
-    position: absolute;
-    top: 79%;
-    left: 29%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 10;
-}
-
-#bord-knop {
-    opacity: 0.9;
-    transition: transform 0.3s ease;
-    pointer-events: auto;
-    display: block; 
-    width: 200px;
-}
-
-.bord-container:hover img {
-  transform: scale(1.05);
-}
-
-.heilige1-container {
-  position: absolute;
-  top: 85%; 
-  left: -10%;
-  transform: translateY(-50%);
-  z-index: 10;
-  opacity: 0;
-}
-
-.animate-slide-heilige1 {
-  animation: heilige1 30s linear forwards;
-}
-
-@keyframes heilige1 {
-  0% {
-    left: -10%;
-    opacity: 1;
-  }
-  100% {
-    left: 110%;
-    opacity: 1;
-  }
-}
-
-#heilige1-knop {
-    pointer-events: auto;
-    display: block; 
-    width: 250px;
-    height: 250px;
-}
-
-.heilige2-container {
-  position: absolute;
-  top: 85%; 
-  left: 110%;
-  transform: translateY(-50%);
-  z-index: 10;
-  opacity: 20;
-}
-
-#heilige2-knop {
-    pointer-events: auto;
-    display: block; 
-    width: 250px;
-    height: 250px;
-}
-
-.animate-slide-heilige2 {
-  animation: heilige2 30s linear forwards;
-}
-
-@keyframes heilige2 {
-  0% {
-    left: 110%;
-    opacity: 1;
-  }
-  100% {
-    left: -20%;
-    opacity: 1;
-  }
-}
-/* ===================== */
-/* OVERLAY STYLING UX    */
-/* ===================== */
 .overlay {
   position: fixed;
   top: 0;
@@ -326,8 +179,6 @@ main {
   font-size: 1rem;
 }
 
-
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -400,4 +251,9 @@ hr {
   border: none;
   height: 1px;
   background-color: #ccc;
+}
+
+
+.overlay {
+  color: black;
 }
