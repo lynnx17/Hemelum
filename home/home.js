@@ -124,11 +124,43 @@ window.addEventListener("DOMContentLoaded", () => {
 bord?.addEventListener("click", () => {
   openOverlay(`
     <article class="overlay-article">
-      <h2>Artikel over het Klooster </h2>
-      <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<em></p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>25 jaar klooster in dienst van God. </h2>
+      <p><em>Het klooster van de H. Nicolaas, gesticht in 2001, is niet weg te denken uit het
+maatschappelijke leven van Súdwest-Fryslân. En in deze 25 jaar is een hoop geschiedenis
+geschreven. Uit dit klooster zijn twee orthodoxe gemeenschappen geboren (Zwolle en
+Leeuwarden) en is er zowaar een relatief grote orthodoxe gemeenschap in Noordoost-
+Nederland ontstaan.<em></p>
+<div style=" width: 80%; ">
+        <img src="../images/intro.jpg" alt="klooster met gelovige Odulfus" style="width:100%; border-radius:8px;">
+    </div><br>
+<p>In 1999 is de Gereformeerde Kerk van Hemelum (Synodaal) opgekocht door de Stichting
+Orthodox Welzijn, die formeel eigenaar is van het klooster. Sindsdien is de gehele kerk
+gerenoveerd om toegewijd te worden voor de Goddelijke Liturgie. Desondanks zijn er
+knipogen naar het voorheen gereformeerde karakter van de kerk. Zo is de voorste anagion
+(houten standaart waar een icoon op rust in het midden van de kerk) gemaakt van het hout
+van de gereformeerde kansel.</p>
+<p>Het orgel maakt plaats voor een overnachtingsplek voor reizende geestelijken. En een grote
+iconostase komt tussen de altaarruimte en de rest van de kerk, al is die iconostase nog eens
+vervangen door de hedendaagse iconostase die afkomstig is uit Belgrado.</p>
+<p>Vanuit het klooster worden meerdere religieuze activiteiten georganiseerd om het religieuze
+leven van de gemeenschap te bevorderen. Op 12 juni wordt de jaarlijkse Odulfusbedevaart
+georganiseerd, waar gelovigen met de boot over de Mora varen en bloemen leggen bij het
+oude H. Nicolaasklooster, waar ons klooster zijn naam aan ontleent. Die bedevaart gaat
+verder naar Bakhuizen, waar een vesper ter ere van Odulfus wordt gebeden.</p>
+<p>Er zijn meerdere broeders geweest die hebben gekozen om het monastieke leven op te
+pakken in Hemelum. Meest prominente voorbeeld is vader Johannes Roodvoet, die na zijn
+monastieke wijding gevraagd is om in Den Haag te dienen voor de parochie van de Heilige
+Maria Magdalena.</p>
+<p>Vanuit Zwolle en Leeuwarden heeft het klooster tich meer bezoekers dan voorheen.
+Daarmee is het klooster ook gegroeid in ruimte. Zo is het oude pastoriegebouw opgekocht
+en dient het als het gasthuis van het klooster. Het staat bekend als het Odulfushuis.</p>
+<p>Verder is in Bakhuizen een non van onze gemeenschap een skete (klein klooster) begonnen
+onder de bescherming van de Moeder Gods. In de Skete is een kleine kapel ingebouwd voor
+het houden van vespers en panagia (gebedsdiensten).</p>
+<p>Natuurlijk is er nog veel meer gebeurd in deze 25 jaar en is dit een hele kleine samenvatting.
+Ook onze gemaakte en verzamelde media vertellen niet alles wat in 25 jaar gebeurd is.
+Zoals de Bijbel ook zegt: “Als die ieder afzonderlijk beschreven zouden worden, dan zou,
+denk ik, de wereld zelf de geschreven boeken niet kunnen bevatten. Amen.”</p>
     </article>
   `);
 });
@@ -140,13 +172,13 @@ aboutLink?.addEventListener("click", (e) => {
     <article class="overlay-jubileum">
       <h2>🎉 Jubileum – Klooster van Hemelum 🎉</h2>
 
-      <p>Het Klooster van Hemelum bestaat dit jaar <strong>XX jaar</strong>! Ter gelegenheid van dit jubileum hebben wij deze interactieve website ontwikkeld.</p>
+      <p>Het Klooster van Hemelum bestaat dit jaar <strong>25 jaar</strong>! Ter gelegenheid van dit jubileum hebben wij deze interactieve website ontwikkeld.</p>
 
-      <p>Deze site is een gezamenlijke creatie van <strong>Art</strong>, <strong>Lynn</strong> & <strong>Vader...</strong>, en biedt bezoekers een unieke blik op de geschiedenis, sfeer en beleving van het klooster.</p>
+      <p>Deze site is een gezamenlijke creatie van <strong>Art</strong>, <strong>Lynn</strong> & <strong>Vader Jewsewy</strong>, en biedt bezoekers een unieke blik op de geschiedenis, sfeer en beleving van het klooster.</p>
 
       <p>Het project is mogelijk gemaakt door het klooster zelf, met steun van vrijwilligers en liefhebbers.</p>
 
-      <p>Duik in verhalen, foto's en video's en vier samen met ons dit bijzondere jubileumjaar!</p>
+      <p>Duik in verhalen, foto's en video's en vier samen met ons dit bijzondere jubileum jaar!</p>
     </article>
   `);
 });
@@ -154,15 +186,23 @@ aboutLink?.addEventListener("click", (e) => {
 
 
   const overlayData = [
-    { element: raam, html: `<h2>Het Raam</h2>
-    <p>Een documontaire over het Klooster.</p>
-    <div class="video-container">
-      <video controls autoplay>
-        <source src="../video/voorbeeld.mp4" type="video/mp4">
-        Je browser ondersteunt deze video niet.
-      </video>
-    </div>` },
-    { element: heilige1Knop, html: `<h2 class="michealh2">Vader Micheal</h2><br>
+    { element: raam, html: `<h2 class="videowijding">Video klooster wijding</h2>
+      <p>Een samenvattende video over de wijding van het klooster.</p>
+
+      <div class="video-container">
+        <video controls autoplay>
+          <source src="../images/samenvattende-video.mov" type="video/mp4">
+          Je browser ondersteunt deze video niet.
+        </video>
+      </div>
+
+      <p>
+      <a href="archief.html#volledige-weiding" target="_blank"> Klik hier </a> &nbsp;om de hele video te bekijken
+      </p>
+    ` },
+    
+    { element: heilige1Knop, html: `<article class="overlay-article">
+      <h2 class="michealh2">Vader Micheal</h2><br>
 
 <b class="micheal">Vader Michael, kwam tot geloof in een Russische leefgemeenschap. Hoe heeft hij
 Gods geduld ervaren? </b>
@@ -258,16 +298,67 @@ geopenbaard, want klaarblijkelijk wilde ik dat niet. Dat Hij toch het geduld had
 wachten tot ik zelf tot dat inzicht kwam, dat is de rode draad.”</p> 
 <div style=" width: 80%; ">
         <img src="../images/micheal3.jpg" alt="Vader Michael 1" style="width:100%; border-radius:8px;">
-    </div>` },
-    { element: heilige2Knop, html: `<h2>Heilige 2</h2>
-    <p>Een documontaire.</p>
-    <div class="video-container">
-      <video controls autoplay>
-        <source src="../video/voorbeeld.mp4" type="video/mp4">
-        Je browser ondersteunt deze video niet.
-      </video>
     </div>
-    <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<em></p>
+    </article>` },
+    
+    { element: heilige2Knop, html: `<article class="overlay-article">
+      <h2>Vader Georgii viert voor het eerst Pasen als diaken</h2>
+    <b>Vader Georgii, diaken van de St. Michaëlparochie in Zwolle, viert dit jaar zijn eerste
+Pasen als diaken. De in 2024 gewijde geestelijke was parochiaan van het eerste uur.</b><br>
+<b>Hoe ervaart hij de Grote Vastentijd voorafgaand aan Pasen?</b><br> 
+<b>En hoe heeft hij de parochie door de jaren heen zien groeien?</b><br><br>
+<div style=" width: 80%; ">
+        <img src="../images/georgi1.jpg" alt="Vader Georgii 1" style="width:100%; border-radius:8px;">
+    </div><br>
+<p>&quot;Voordat ik als lezer werd gewijd, was ik op audiëntie bij de bisschop. De bisschop vroeg
+mij: ‘So you dream to be a priest?’ Ik antwoordde: ‘Dromen is wel een heel groot woord.’ De
+bisschop vervolgde met een korte preek over waarom de kerk geen priesters wil die ervan
+dromen om priester te worden,” vertelt vader Georgii, met een glimlach verscholen achter
+zijn baard.</p>
+<p>Het is geen droom, maar een pad dat de diaken al lange tijd bewandelt, zelfs van vóór zijn
+ontdekking van de Orthodoxie. “Ik kom uit een protestants nest. Ik was dermate actief in de
+kerk dat het idee opkwam om dominee te worden. Ik begon aan een theologiestudie, waar
+meer vragen op me afkwamen dan antwoorden. Een van mijn klasgenoten stond op het punt
+priester te worden in de Syrisch-Orthodoxe Kerk, en ik raakte zo geïnteresseerd dat ik met
+hem weleens naar het Syrisch-Orthodoxe klooster in Twente ging. Daar heb ik voor het eerst
+een kruis en iconen vereerd. Door het bestuderen van theologie begon ik mezelf vragen te
+stellen: ‘Wat is nou de kerk?’ ‘Waarom moet er een man in een pak voor de kerk een verhaal
+uit de Bijbel voorlezen, waarna we een lied met een of twee coupletten zingen, gevolgd door
+gebed en modulatie?’ Ik ging me afvragen waarom we dingen doen zoals we ze doen. Toen
+kwam ik tot de conclusie dat de Orthodoxe Kerk betere papieren had.”</p>
+<p>Vader Georgii had wel een probleem voordat hij Orthodox wilde worden: de cultuur. “Alles
+wat ik in de Orthodoxe Kerk vond, was niet Nederlands. Mijn redenering was: ‘Ik ben
+Nederlands, dus ik kan het beste bij een Nederlandse kerk blijven.’ Maar toen kwam ik mijn
+vrouw tegen,” lacht de beginnend geestelijke, “die Russisch is.” “Toen verviel mijn argument
+dat ik niets had met de culturen van de Orthodoxie. Daarna was er geen reden meer om niet
+Orthodox te worden.”</p>
+<div style=" width: 80%; ">
+        <img src="../images/georgi2.jpg" alt="Vader Georgii 1" style="width:100%; border-radius:8px;">
+    </div>
+<p>Vader Georgii is parochiaan van het eerste uur. Daarvoor was hij lid van de Orthodoxe
+parochie in Deventer. “Ik had veel gestudeerd, maar in Deventer leerde ik de praktijk van het
+geloof. De eerste Paasdienst zal ik nooit vergeten.” Toen hij hoorde dat er diensten werden
+georganiseerd in Zwolle, ging hij meteen helpen. “Er waren veel mensen vanuit Deventer die
+geholpen hebben met de eerste bijeenkomst van de gemeenschap in Zwolle.” De eerste
+religieuze bijeenkomsten van de toekomstige St. Michaëlparochie waren vesperdiensten.
+Deze vespers werden gehouden in de kelder van de vrijgemaakte Plantagekerk, aan de
+rand van het centrum.</p>
+<h3>Diakenambt</h3>
+<p>De recent gewijde diaken merkt verschil tussen zijn eerste keren en de meer recente keren
+dat hij dient bij het altaar. “In het begin dacht je alleen maar na over waar je allemaal naartoe
+moet, hoe je goed bewierookt, je moet door het dienstenboek kunnen navigeren, en dat
+vraagt veel aandacht. Het is evident dat dienen aan het altaar genade met zich meebrengt.”
+Vader Georgii vindt het lastig om die genade precies te beschrijven. “Ik kan het verder
+moeilijk uitleggen,” zegt de jonge geestelijke terwijl hij vanuit zijn kantoor in de verte kijkt. Hij
+concludeert: “Binnen de Orthodoxie schieten woorden vaak tekort om dingen volledig recht
+te doen.”</p>
+<p>Zachtjes maar zeker klom vader Georgii de ladder op binnen de rangen van de parochie. Hij
+begon als altaardienaar en werd daarna hypo-diaken, voordat hij werd gewijd tot diaken van
+de St. Michaëlparochie. “Vader Michael en ik gaan regelmatig naar het klooster in Hemelum,
+waar we les krijgen in onder andere kerkslavisch en geestelijke ontwikkeling. Een soort
+catechese-plus, met veel nadruk op theorie en minder op de persoon. Daarnaast bezoeken
+we vader Johannes in Den Haag, die ons een soort masterclass over de liturgie geeft.”</p>
+</article>
       ` },
     { element: contactLink, html: `<h2 class"black">Contact – Klooster van Hemelum</h2>
       <form id="contact-form" class="contact-form">
@@ -278,8 +369,8 @@ wachten tot ik zelf tot dat inzicht kwam, dat is de rode draad.”</p>
       </form>
       <hr>
       <div class="contact-info">
-        <p><strong>Adres</strong><br>Hemelumstraat 12, 8584 XX Hemelum</p>
-        <p><strong>E-mail</strong><br>info@kloostervanhemelum.nl</p>
+        <p><strong>Adres</strong><br>Buorren 18, 8584 VC Hemelum</p>
+        <p><strong>E-mail</strong><br>info@kloosterhemelum.nl</p>
         <p><strong>Telefoon</strong><br>+31 (0)514 123 456</p>
       </div>`, preventDefault: true }
   ];

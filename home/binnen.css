@@ -6,6 +6,15 @@ body {
   font-family: Arial, sans-serif;
   background: black;
   color: white;
+  background-image: url('../images/binnenkant.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+html, body {
+  height: auto;
 }
 
 /* ===================== */
@@ -67,17 +76,6 @@ header h1 {
 
 .nav-links.show {
   display: flex;
-}
-
-/* ===================== */
-/* AUDIO                 */
-/* ===================== */
-audio {
-  display: none;
-}
-
-#background-music {
-  z-index: 30;
 }
 
 .overlay {
@@ -257,3 +255,122 @@ hr {
 .overlay {
   color: black;
 }
+
+main {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    width: 75%;
+    margin: 10px auto;
+    padding: 40px 20px; 
+}
+
+#onufry{
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#onufry audio {
+    width: 80%;
+}
+
+#joanna{
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#joanna h3{
+  text-align: center;
+  padding: 20px;
+}
+
+#joanna p{
+  padding: 30px;
+}
+
+#oxana{
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#oxana h3{
+  text-align: center;
+  padding: 20px;
+}
+
+#oxana p{
+  padding: 30px;
+}
+
+#docu{
+    background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#docu h3{
+  text-align: center;
+}
+
+#docu p{
+  padding: 30px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 verhouding */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* deuren standaard dicht bij binnenkomst */
+.doors-left, .doors-right {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #111; /* deuren */
+    z-index: 9999;
+    transition: transform 1s ease-in-out;
+}
+
+/* start: deuren in het midden */
+.doors-left { left: 0; transform: translateX(50%); }
+.doors-right { right: 0; transform: translateX(-50%); }
+
+/* open: deuren naar buiten schuiven */
+.doors-open .doors-left { transform: translateX(-100%); }
+.doors-open .doors-right { transform: translateX(100%); }
+

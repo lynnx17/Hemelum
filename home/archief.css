@@ -99,52 +99,28 @@ audio {
   padding: 40px;
 }
 
-/* Titel boven grid */
-.archief-overlay h2 {
+.video-h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  letter-spacing: 1px;
 }
 
-/* Grid voor archief-items */
-.archief-container {
+.archief-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr); /* 2 naast elkaar */
+  gap: 20px;
 }
 
-/* Individueel item */
 .archief-item {
-  background: rgba(20, 20, 20, 0.85);
+  background: rgba(255,255,255,0.1);
   padding: 15px;
-  border-radius: 6px;
-  transition: transform 0.2s ease;
+  border-radius: 10px;
 }
 
-/* Hover-effect subtiel */
-.archief-item:hover {
-  transform: scale(1.02);
-}
-
-/* Afbeeldingen */
-.archief-item img {
+.archief-item iframe {
   width: 100%;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  height: 250px;
+  border-radius: 8px;
 }
 
-/* Titel van item */
-.archief-item h3 {
-  margin: 5px 0;
-  font-size: 1rem;
-}
-
-/* Beschrijving */
-.archief-item p {
-  font-size: 0.85rem;
-  color: #ccc;
-}
 
 .overlay {
   position: fixed;
@@ -322,4 +298,89 @@ hr {
 
 .overlay {
   color: black;
+}
+
+  #slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 500px; /* vaste hoogte */
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Slides */
+  #slideshow-container img {
+  width: 100%;
+    height: 100%;
+    object-fit: contain; /* hele foto zichtbaar, geen croppen */
+    background: #000; /* optioneel: zwarte achtergrond bij lege randen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 10px;
+  }
+
+  #slideshow-container img.active {
+    opacity: 1;
+  }
+
+  /* Navigatieknoppen */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  #prev { left: 10px; }
+  #next { right: 10px; }
+
+  .nav-btn:hover {
+    background: rgba(0,0,0,0.7);
+  }
+
+.foto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.foto-grid img {
+  width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+  display: block;
+  height: 200px;     
+  object-fit: contain;
+  background: #79797961;
+}
+
+.foto-grid img:hover {
+  transform: scale(1.03);
+}
+
+h2
+{
+  text-align: center;
+}
+
+.fotoar{
+      margin-top: 70px;
+}
+
+.fotoar p {
+  text-align: center;
 }
