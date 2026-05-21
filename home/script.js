@@ -185,6 +185,11 @@ samenvattende video van de wijding van het H Nicolaas klooster" frameborder="0"
         Hiëromonnik Jewsewy (Vaillant) werd in 1954 geboren; in 1998 is hij gewijd. Hij is rector van
 het klooster van de Heilige Nikolaas van Myra te Hemelum, en van de parochies van de
 Heilige Aartsengel Michaël te Zwolle en van de Heilige Johannes de Doper te Leeuwarden.</em><br><br>
+      <div style="width: 100%;">
+        <img src="../images/vader.jpg"
+             alt="Vader Jewsewy"
+             style="width:100%; border-radius:8px;">
+      </div>
 Vader Jewsewy is samen met zijn broer geboren in Sneek. Beide hij en zijn broer zijn
 orthodox geworden in de orthodoxe parochie in Groningen, waar zijn broer, vader Onufry, nu
 dient. Jewsewy studeerde sociologie aan de Rijksuniversiteit Groningen en heeft een
@@ -216,11 +221,7 @@ Vanuit het klooster zijn meerdere orthodoxe gemeenschappen gesticht, zijnde: Lee
 en Zwolle
       </p>
 
-      <div style="width: 100%;">
-        <img src="../images/vader.jpg"
-             alt="Vader Jewsewy"
-             style="width:100%; border-radius:8px;">
-      </div>
+
 
     </article>
   `
@@ -299,17 +300,11 @@ Zachtjes maar zeker klom vader Georgii de ladder op binnen de rangen van de paro
       ` },
     {
       element: contactLink, html: `<h2 class"black">Contact – Klooster van Hemelum</h2>
-      <form id="contact-form" class="contact-form">
-        <label>Naam<input type="text" name="naam" placeholder="Uw naam" required></label>
-        <label>E-mail<input type="email" name="email" placeholder="uw@email.nl" required></label>
-        <label>Bericht<textarea name="bericht" rows="4" placeholder="Uw bericht..." required></textarea></label>
-        <button type="submit">Verzend bericht</button>
-      </form>
       <hr>
       <div class="contact-info">
         <p><strong>Adres</strong><br>Buorren 18, 8584 VC Hemelum</p>
         <p><strong>E-mail</strong><br>info@kloosterhemelum.nl</p>
-        <p><strong>Telefoon</strong><br>+31 (0)514 123 456</p>
+        <p><strong>Rekening-nummer</strong><br>NL65 INGB 00069 10488</p>
       </div>`, preventDefault: true
     }
   ];

@@ -321,6 +321,10 @@ audio {
   margin-top: 70px;
 }
 
-.fotoar p {
+.fotoar p, .wiebbe {
   text-align: center;
+}
+
+.wiebbe a {
+  color: #ffffff;
 }
