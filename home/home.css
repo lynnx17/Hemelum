@@ -1,3 +1,5 @@
+/* ALGEMENE INSTELLINGEN (BODY & HTML) */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,17 +8,19 @@ body {
     background: url('../images/home-achtergrond.jpg') no-repeat center center / cover;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER & NAVIGATIE */
+
 header {
     background-color: #333333;
     color: #ffffff;
     padding: 20px;
     text-align: center;
     z-index: 20;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 header {
@@ -77,6 +81,8 @@ header h1 {
   display: flex;
 }
 
+/* AUDIO & MULTIMEDIA */
+
 audio {
     display: none; 
 }
@@ -84,6 +90,20 @@ audio {
 #background-music{
   z-index: 30;
 }
+
+.videowijding {
+  text-align: center;
+}
+
+.video-container + p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* MAIN LAYOUT & INTERACTIEVE ELEMENTEN (DEUR, RAAM, BORD) */
 
 main {
     position: relative;
@@ -97,6 +117,7 @@ main {
     background-position: center;
 }
 
+/* Deur */
 .deur-container {
     position: absolute;
     top: 84%;
@@ -119,14 +140,7 @@ main {
   transform: scale(1.05);
 }
 
-@media (min-width:1500px) {
-  #deur-knop{
-    width: 285px;
-    height: 354px;
-    }
-}
-
-
+/* Raam */
 .raam-container {
     position: absolute;
     top: 49%;
@@ -149,30 +163,7 @@ main {
   transform: scale(1.05);
 }
 
-@media (min-width:1500px) {
-  #raam-knop{
-    width: 230px;
-    height: 365px;
-    }
-
-    .raam-container{
-      left: 32%;
-      top: 49%;
-    }
-}
-
-.videowijding {
-  text-align: center;
-}
-
-.video-container + p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-}
-
+/* Bord */
 .bord-container {
     position: absolute;
     top: 79%;
@@ -194,13 +185,9 @@ main {
   transform: scale(1.05);
 }
 
-@media (min-width:1500px) {
-    .bord-container{
-    top: 79%;
-    left: 31%;
-    }
-}
+/* ANIMATIES (HEILIGEN SLIDES) */
 
+/* Heilige 1 (Links naar Rechts) */
 .heilige1-container {
   position: absolute;
   top: 85%; 
@@ -209,13 +196,6 @@ main {
   z-index: 10;
   opacity: 0;
 }
-
-
-@media (min-width:1500px) {
-   .heilige1-container {
-    top: 90%
-   }
-  }
 
 .animate-slide-heilige1 {
   animation: heilige1 30s linear forwards;
@@ -239,6 +219,7 @@ main {
     height: 250px;
 }
 
+/* Heilige 2 (Rechts naar Links) */
 .heilige2-container {
   position: absolute;
   top: 85%; 
@@ -259,6 +240,27 @@ main {
   animation: heilige2 30s linear forwards;
 }
 
+/* Vader Jewsewy */
+
+.vader-container {
+    position: absolute;
+    top: 70%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 99;
+}
+
+#vader-knop {
+    opacity: 6.95;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    pointer-events: auto;
+    display: block;
+    width: auto;
+    height: 500px;
+    z-index: 99;
+}
+
 @keyframes heilige2 {
   0% {
     left: 110%;
@@ -270,14 +272,8 @@ main {
   }
 }
 
-@media (min-width:1500px) {
-   .heilige2-container {
-    top: 87%
-   }
-  }
-/* ===================== */
-/* OVERLAY STYLING UX    */
-/* ===================== */
+/* OVERLAY */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -325,7 +321,6 @@ main {
   max-width: 700px;
 }
 
-/* VIDEO CONTAINER */
 .overlay-content .video-container {
   width: 100%;
   display: flex;
@@ -341,7 +336,6 @@ main {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-/* SLUITKNOP */
 #overlay-close {
   position: absolute;
   top: 10px;
@@ -376,7 +370,7 @@ main {
   font-size: 1rem;
 }
 
-
+/* CONTACT FORMULIER*/
 
 .contact-form {
   display: flex;
@@ -384,7 +378,7 @@ main {
   gap: 18px;
   margin-top: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: left; /* alles links uitlijnen */
+  text-align: left;
 }
 
 .contact-form label {
@@ -393,7 +387,7 @@ main {
   font-size: 0.95rem;
   color: #333;
   font-weight: 500;
-  text-align: left; /* labels links uitlijnen */
+  text-align: left;
 }
 
 .contact-form input,
@@ -405,7 +399,7 @@ main {
   border-radius: 6px;
   font-family: inherit;
   transition: border 0.2s ease, box-shadow 0.2s ease;
-  text-align: left; /* input en textarea links */
+  text-align: left;
 }
 
 .contact-form input:focus,
@@ -426,7 +420,7 @@ main {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s ease, transform 0.1s ease;
-  text-align: left; /* button tekst ook links */
+  text-align: left;
 }
 
 .contact-form button:hover {
@@ -438,7 +432,7 @@ main {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
-  text-align: left; /* alles links in contact-info */
+  text-align: left;
 }
 
 .contact-info p {
@@ -452,10 +446,44 @@ hr {
   background-color: #ccc;
 }
 
+/* SPECIFIEKE PAGINA ELEMENTEN (MICHEAL)*/
+
 .michealh2{
   text-align: center;
 }
 
 .micheal {
   text-align: left;
+}
+
+/* RESPONSIVE DESIGN (MEDIA QUERIES) */
+
+@media (min-width:3000px) {
+  #deur-knop{
+    width: 285px;
+    height: 354px;
+  }
+
+  #raam-knop{
+    width: 230px;
+    height: 365px;
+  }
+
+  .raam-container{
+    left: 32%;
+    top: 49%;
+  }
+
+  .bord-container{
+    top: 79%;
+    left: 31%;
+  }
+
+  .heilige1-container {
+    top: 90%
+  }
+
+  .heilige2-container {
+    top: 87%
+  }
 }

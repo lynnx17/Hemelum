@@ -1,18 +1,14 @@
-let password = "GodIsGroot";
+function saveName() {
+  const nameInput = document.getElementById('name-input');
+  const name = nameInput.value;
 
-function inloggenBtn() {
-    console.log("Inloggen button clicked");
-    var wachtwoord = document.getElementById("password").value;
-
+  if (name.trim() !== "") {
+    // Sla de naam op in het geheugen van de browser
+    localStorage.setItem("gebruikersnaam", name);
     
-
-    if (wachtwoord === "") {
-        alert("Vul alstublieft alle velden in.");
-        return;
-    } else if (wachtwoord === password) {
-        alert("Inloggen gelukt");
-        window.location.href = "start.html";
-    } else {
-        alert("Inloggen mislukt. Probeer het opnieuw.");
-    }
+    // Ga naar de homepagina in de map 'home'
+    window.location.href = "home/home.html";
+  } else {
+    alert("Voer a.u.b. een naam in voordat je begint.");
+  }
 }

@@ -9,15 +9,20 @@
 </head>
 
 <body>
+
+    <!-- HEADER & NAVIGATIE -->
     <header>
         <h1>Welkom <span id="naam-placeholder"></span> in het klooster van Hemelum</h1>
+        
         <div class="hamburger" id="hamburger">&#9776;</div>
+        
         <nav class="nav-links" id="nav-links">
             <a href="archief.html">Archief</a>
             <a href="#" id="about-link">Over deze website</a>
             <a href="#" id="contact-link">Contact</a>
         </nav>
 
+        <!-- Audio Controle & Bestanden -->
         <button id="music-toggle" aria-label="Muziek pauzeren/afspelen">🎵</button>
         <audio id="background-music" loop>
             <source src="../audio/start.mp3" type="audio/mpeg">
@@ -25,20 +30,29 @@
         </audio>
     </header>
 
+    <!-- INTERACTIEVE ELEMENTEN (MAIN) -->
     <main>
+        <!-- Deur interactie -->
         <div class="deur-container">
             <img src="../images/gifs/deur.png" alt="Kloosterdeur" id="deur-knop">
         </div>
 
+        <!-- Vader -->
+        <div class="vader-container">
+            <img src="../images/gifs/zeewier.png" alt="Vader Jewsewy" id="vader-knop">
+        </div>
+
+        <!-- Raam interactie -->
         <div class="raam-container">
             <img src="../images/gifs/raam.png" alt="Kloosterraam" id="raam-knop">
         </div>
 
-
+        <!-- Informatiebord interactie -->
         <div class="bord-container">
             <img src="../images/gifs/bord.png" alt="Kloosterbord" id="bord-knop">
         </div>
 
+        <!-- Heilige Animatie 1 -->
         <div class="heilige1-container">
             <img src="../images/gifs/heilige 1.png" alt="heilige" id="heilige1-knop">
             <audio id="heilige-sound">
@@ -47,6 +61,7 @@
             </audio>
         </div>
 
+        <!-- Heilige Animatie 2 -->
         <div class="heilige2-container">
             <img src="../images/gifs/heilige 2.png" alt="heilige" id="heilige2-knop">
             <audio id="heilige-sound">
@@ -56,7 +71,7 @@
         </div>
     </main>
 
-
+    <!-- OVERLAY SYSTEEM (POP-UPS) -->
     <div id="overlay" class="overlay hidden">
         <div class="overlay-content">
             <button id="overlay-close">✖</button>
@@ -64,11 +79,8 @@
         </div>
     </div>
 
+    <!-- EXTERNE SCRIPTS -->
+    <script src="script.js"></script>
 
-
-
-
-    <script src="home.js"></script>
 </body>
-
 </html>

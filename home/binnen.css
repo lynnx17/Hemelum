@@ -1,6 +1,5 @@
-/* ===================== */
-/* ALGEMENE STIJLEN BODY */
-/* ===================== */
+/* ALGEMENE STIJLEN & BODY */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -17,9 +16,14 @@ html, body {
   height: auto;
 }
 
-/* ===================== */
-/* HEADER EN NAVIGATIE   */
-/* ===================== */
+hr {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* HEADER & NAVIGATIE */
 header {
   display: flex;
   justify-content: space-between;
@@ -78,6 +82,113 @@ header h1 {
   display: flex;
 }
 
+/* MAIN LAYOUT & CONTENT BLOKKEN */
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+  width: 75%;
+  margin: 10px auto;
+  margin-bottom: 100%;
+  padding: 40px 20px; 
+}
+
+/* Specifieke sectie blokken (Onufry, Joanna, Oxana, Docu) */
+#onufry {
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#onufry audio {
+  width: 80%;
+}
+
+#joanna {
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#joanna h3 {
+  text-align: center;
+  padding: 20px;
+}
+
+#joanna p {
+  padding: 30px;
+}
+
+#oxana {
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#oxana h3 {
+  text-align: center;
+  padding: 0 30px 0 30px;
+}
+
+#oxana p {
+  padding: 0 30px 0 30px;
+}
+
+
+
+#docu {
+  background-color: #ccccccab;
+  backdrop-filter: blur(2px); 
+  border-radius: 5px;
+  color: #111;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+#docu h3 {
+  text-align: center;
+}
+
+#docu p {
+  padding: 30px;
+}
+
+/* VIDEO CONTAINERS (IFRAMES) */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 verhouding */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* OVERLAY & CONTACT FORMULIER */
 .overlay {
   position: fixed;
   top: 0;
@@ -89,6 +200,7 @@ header h1 {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  color: black; /* Samengevoegd vanuit de onderste definitie */
 }
 
 .overlay.hidden {
@@ -126,7 +238,7 @@ header h1 {
   max-width: 700px;
 }
 
-/* VIDEO CONTAINER */
+/* Video binnen overlay */
 .overlay-content .video-container {
   width: 100%;
   display: flex;
@@ -142,7 +254,6 @@ header h1 {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-/* SLUITKNOP */
 #overlay-close {
   position: absolute;
   top: 10px;
@@ -177,13 +288,14 @@ header h1 {
   font-size: 1rem;
 }
 
+/* Contact Formulier Stijlen */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
   margin-top: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: left; /* alles links uitlijnen */
+  text-align: left;
 }
 
 .contact-form label {
@@ -192,7 +304,7 @@ header h1 {
   font-size: 0.95rem;
   color: #333;
   font-weight: 500;
-  text-align: left; /* labels links uitlijnen */
+  text-align: left;
 }
 
 .contact-form input,
@@ -204,7 +316,7 @@ header h1 {
   border-radius: 6px;
   font-family: inherit;
   transition: border 0.2s ease, box-shadow 0.2s ease;
-  text-align: left; /* input en textarea links */
+  text-align: left;
 }
 
 .contact-form input:focus,
@@ -225,7 +337,7 @@ header h1 {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s ease, transform 0.1s ease;
-  text-align: left; /* button tekst ook links */
+  text-align: left;
 }
 
 .contact-form button:hover {
@@ -237,140 +349,48 @@ header h1 {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
-  text-align: left; /* alles links in contact-info */
+  text-align: left;
 }
 
 .contact-info p {
   margin: 8px 0;
 }
 
-hr {
-  margin: 30px 0;
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-}
+/* ANIMATIES & INTERACTIE (DEUREN & ARROWS) */
 
-
-.overlay {
-  color: black;
-}
-
-main {
-
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; 
-    width: 75%;
-    margin: 10px auto;
-    padding: 40px 20px; 
-}
-
-#onufry{
-  background-color: #ccccccab;
-  backdrop-filter: blur(2px); 
-  border-radius: 5px;
-  color: #111;
-  width: 80%;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-}
-
-#onufry audio {
-    width: 80%;
-}
-
-#joanna{
-  background-color: #ccccccab;
-  backdrop-filter: blur(2px); 
-  border-radius: 5px;
-  color: #111;
-  width: 80%;
-  height: auto;
-  padding: 10px;
-  margin-top: 25px;
-}
-
-#joanna h3{
-  text-align: center;
-  padding: 20px;
-}
-
-#joanna p{
-  padding: 30px;
-}
-
-#oxana{
-  background-color: #ccccccab;
-  backdrop-filter: blur(2px); 
-  border-radius: 5px;
-  color: #111;
-  width: 80%;
-  height: auto;
-  padding: 10px;
-  margin-top: 25px;
-}
-
-#oxana h3{
-  text-align: center;
-  padding: 20px;
-}
-
-#oxana p{
-  padding: 30px;
-}
-
-#docu{
-    background-color: #ccccccab;
-  backdrop-filter: blur(2px); 
-  border-radius: 5px;
-  color: #111;
-  width: 80%;
-  height: auto;
-  padding: 10px;
-  margin-top: 25px;
-}
-
-#docu h3{
-  text-align: center;
-}
-
-#docu p{
-  padding: 30px;
-}
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 verhouding */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* deuren standaard dicht bij binnenkomst */
+/* Deuren animatie bij binnenkomst */
 .doors-left, .doors-right {
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
-    background: #111; /* deuren */
+    background: #111;
     z-index: 9999;
     transition: transform 1s ease-in-out;
 }
 
-/* start: deuren in het midden */
 .doors-left { left: 0; transform: translateX(50%); }
 .doors-right { right: 0; transform: translateX(-50%); }
 
-/* open: deuren naar buiten schuiven */
+/* Open toestand */
 .doors-open .doors-left { transform: translateX(-100%); }
 .doors-open .doors-right { transform: translateX(100%); }
 
+/* Home Arrow Knop */
+.home-arrow {
+    display: inline-block;
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #11111162;
+    padding: 10px;
+}
+
+.home-arrow:hover {
+  transform: translateX(-3px);
+  transition: 0.2s ease;
+}

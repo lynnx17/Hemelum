@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemelum</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Start - Digital Story</title>
 </head>
 <body>
-
-    <h1>Deze Website is onderdeel van een groter projecter</h1>
-    <h2>Daarom is de website alleen toegankelijk voor degene die bij het bouwen van dit project betrokken zijn</h2>
-
-    <div>
-        <h3>Wachtwoord</h3>
-        <input type="password" id="password" placeholder="Voer het wachtwoord in">
-        <button id="inloggen-btn" onclick="inloggenBtn()">Verzenden</button>
-    </div>
+    <header>
+        <h1>Digital Story</h1>
+        <h2>Een digitale verhaallijn over de geschiedenis van het Russisch-Orthodoxe klooster in Hemelum</h2>
+    </header>
     
+    <audio id="start-audio" autoplay muted loop>
+      <source src="audio/start.mp3" type="audio/mpeg">
+    </audio>
 
+    <main>
+        <label for="name-input">Voer je naam in:</label>
+        <input type="text" id="name-input" placeholder="Voer je naam in">
+        <button id="start-btn" onclick="saveName()">Start de digital story</button>
+    </main>
+
+    <footer>
+        <p>© 2025 Digital Story</p>
+        <p>Made by Lynn Huisman & Art de Ruiter</p>
+    </footer>
+    
+    <!-- Verwijzing naar index.js -->
     <script src="index.js"></script>
 </body>
 </html>
