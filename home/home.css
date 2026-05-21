@@ -283,8 +283,8 @@ main {
 
 .vader-container {
     position: absolute;
-    top: 70%;
-    left: 67%;
+    top: 82%;
+    left: 68%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 99;
@@ -296,7 +296,7 @@ main {
     pointer-events: auto;
     display: block;
     width: auto;
-    height: 500px;
+    height: 299px;
     z-index: 99;
 }
 
