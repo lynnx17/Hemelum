@@ -527,6 +527,41 @@ hr {
   }
 }
 
+@media (min-width:1285px) {
+  #deur-knop{
+    width: 287px;
+    height: 343px;
+  }
+
+  #raam-knop{
+    width: 164px;
+    height: 253px;
+  }
+
+  .raam-container{
+    left: 32%;
+    top: 49%;
+  }
+
+  #bord-knop {
+    width: 126px;
+  }
+
+  .bord-container{
+    top: 79%;
+    left: 31%;
+  }
+
+  .heilige1-container {
+    top: 90%
+  }
+
+  .heilige2-container {
+    top: 87%
+  }
+}
+
+
 /* Tablet + mobiel */
 @media (max-width: 1024px) {
 
