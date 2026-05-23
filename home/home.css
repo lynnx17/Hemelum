@@ -529,13 +529,13 @@ hr {
 
 @media (min-width:1285px) {
   #deur-knop{
-    width: 187px;
+    width: 192px;
     height: 243px;
   }
 
   #raam-knop{
-    width: 164px;
-    height: 270px;
+    width: 169px;
+    height: 280px;
   }
 
   .raam-container{
@@ -544,7 +544,7 @@ hr {
   }
 
   #bord-knop {
-    width: 126px;
+    width: 145px;
   }
 
   .bord-container{
